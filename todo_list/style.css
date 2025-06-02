@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(images/background.png) no-repeat center/cover;
+}
+
+.contanier{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    
+}
+.to-do-app{
+    width: 500px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2s);
+    border-radius: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.2s);
+    
+}
+.to-do-app h1{
+    font-size: 2rem;
+    margin: 15px;
+}
+
+.state-contanier{
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border: 2px solid white;
+    gap: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+}
+
+.details{
+    width: 300px;
+}
+
+.details h3{
+    color: white;
+}
+
+#progressbar{
+    width: 150px;
+    height: 7px;
+    border-radius: 20px;
+    background-color: rgba(255, 194, 209, 0.3);
+    position: relative;
+    margin-top: 10px;
+}
+
+#progress{
+    width: 0%;
+    height: 100%;
+    background-color: #ff6f91;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+#number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-color: #ff6f91;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border: 2px solid rgba(255, 194, 209, 0.3);
+}
+
+.input-area{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    
+}
+.input-area input{
+    flex: 1;
+    padding: 10px 10px;
+    font-size: 1.1em;
+    border: none;
+    outline: none;
+    border-radius: 22px;
+    background-color: rgba(255, 194, 209, 0.3);
+    color: #dbdbdb;
+}
+
+.input-area input::placeholder{
+    color: white;
+}
+
+.add-task-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    padding: 8px;
+    border-radius:50% ;
+    cursor: pointer;
+    border: none;
+    background-color: rgba(255, 194, 209, 0.3);
+    transition: all 0.2s ease;
+}
+
+.add-task-btn:hover{
+    transform: scale(1.1);
+    background-color: #ff6f91;
+}
+
+#todos-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+#no-tasks{
+    font-size: 1.1em;
+}
+
+#todos-list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    background-color: rgba(255, 194, 209, 0.3);
+    margin-top: 20px;
+    padding: 8px 10px;
+    border-radius: 33px;
+    font-size: 1.1rem;
+    color: white;
+    position: relative;
+    transition: box-shadow 0.2s ease;
+}
+#todos-list li:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#todos-list li .checkbox-task{
+    min-width:20px;
+    height: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: rgba(255, 255, 255, 0.2s);
+    background-color: rgba(255, 194, 209, 0.3);
+    transition: all 0.2ss ease;
+}
+
+#todos-list li .checkbox:checked{
+    transform: scale(1.1);
+    background-color: #ff6f91;
+}
+
+#todos-list li .checkbox:checked::before{
+    content: '\2713';
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+#todos-list li span{
+    flex: 1;
+    margin-left: 10px;
+    word-wrap: break-word;
+}
+
+
+.task-btns{
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.task-btns button{
+    background-color: rgba(255, 194, 209, 0.3);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.task-btns button :hover{
+    transform: scale(1.1);
+}
+
+.task-btns .edit-btn{
+    background-color: #ffbf00;
+}
+
+.task-btns .del-btn{
+    background-color: red;
+}
