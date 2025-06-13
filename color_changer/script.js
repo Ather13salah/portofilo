@@ -20,20 +20,22 @@ const colors = [
   'gold'
 ];
 ;
-let counter = 0
+//let counter = 0\
+
 changerBtn.addEventListener('click',(event) =>{
     event.preventDefault();
-    if (colors[counter] === 'black'){
+    let randomColor = colors[Math.floor(Math.random()*colors.length)]
+    if (randomColor === 'black'){
         bodyColor.style.backgroundColor = `${colors[counter]}`;
         text.style.color = 'white';
         changerBtn.style.backgroundColor = 'white';
         counter++
 
     }else{
-        bodyColor.style.backgroundColor = `${colors[counter]}`;
+        bodyColor.style.backgroundColor = `${randomColor}`;
         text.style.color = 'black';
         changerBtn.style.color = 'black';
-        counter++
+        //counter++
     }
 
 });

@@ -1,0 +1,176 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --color : #f44336
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eee;
+}
+
+h1{
+    text-align: center;
+    background-color: white;
+    margin: 0 0 20px;
+    padding: 10px;
+}
+.guessing-game {
+    width: 1000px;
+    text-align: center;
+    margin: 20px auto;
+    min-height: 100vh;
+    background-color: #eee;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* game area */
+.game-area .inputs > div {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-area .inputs > div span {
+    margin-right: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+}
+
+.game-area .inputs > div.disabled-inputs {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.game-area .inputs input {
+    margin: 0 5px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 60px;
+    caret-color: var(--color);
+    background-color: white;
+    border: none;
+    border-bottom: 3px solid #333;
+}
+
+.game-area .inputs input:focus {
+    outline-color: #ccc;
+}
+
+.game-area .inputs input.yes-in-place {
+    background-color: #f89e13;
+    border: #f89e13;
+    color: white;
+}
+
+.game-area .inputs input.not-inplace {
+    background-color: #18ba89;
+    border: #18ba89;
+    color: white;
+}
+
+.game-area .inputs input.wrong {
+    background-color: #27303f;
+    border: #27303f;
+    color: white;
+}
+
+/* key colors section */
+.key-colors h2 {
+    margin-top: 20px;
+}
+
+.key-colors .key-color {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+    margin-right: 10px;
+}
+
+.key-colors .key-color .key {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.key-colors .key-color .key.in-place {
+    background-color: #f89e13;
+}
+
+.key-colors .key-color .key.not-inplace {
+    background-color: #18ba89;
+}
+
+
+.key-colors .key-color .key.wrong {
+    background-color: #27303f;
+}
+
+.key-colors .key-color .key-text {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.controlls button{
+    display: flex;
+    flex-direction: row;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+
+}
+.check{
+    background-color: red;
+    color: white;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.hint{
+    background-color: #f89e13;
+    border-radius: 10px
+
+}
+.hint span{
+    color: white;
+    font-size: 1.1em;
+}
+footer{
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #333;
+    color: white;
+    
+}
+.message{
+    font-size: 1.5em;
+    color: black;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 10px;
+    
+
+}
+.message span{
+    font-size: 1.1em;
+    color: red;
+    font-weight: bold;
+}
