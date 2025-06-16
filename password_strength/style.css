@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:azure;
+}
+
+.card{
+    width: 400px;
+    height: 200px;
+    background-color: rgb(235, 231, 231);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 4px solid white;
+    border-radius: 15px;
+    padding: 10px;
+}
+.title{
+    font-size: 1.5em;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 15px;
+}
+.progress-bar {
+    background-color: #eee;
+    width: 200px;
+    height: 6px;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.progress {
+    background-color: black;
+    width: 0;
+    height: 100%;
+    border-radius: 20px;
+    transition: width ease 0.s;
+}
+
+.input-area input{
+    border: none;
+    outline: none;
+    background-color: #eee;
+    width: 200px;
+    height: 30px;
+    padding: 15px;
+    color: black;
+    border-radius: 20px;
+    border: 2px solid;
+
+}
+.input-area button{
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+ 
+}
+p{
+    margin-top: 10px;
+    
+}
